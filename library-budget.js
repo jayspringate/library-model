@@ -7,6 +7,7 @@ function Government(city, minBudget, maxBudget) {
 Government.prototype.paysout = function() {
 	var budtotal = Math.floor(Math.random() * (1 + this.maxBudget - this.minBudget) + this.minBudget);
 	console.log(budtotal);
+	return budtotal;
 }
 
 function Population(city, minDonations, maxDonations) {
@@ -18,6 +19,7 @@ function Population(city, minDonations, maxDonations) {
 Population.prototype.donated = function () {
 	var dontotal = Math.floor(Math.random() * (1 + this.maxDonations - this.minDonations) + this.minDonations);
 	console.log(dontotal);
+	return dontotal;
 }
 
 var seattleGovt = new Government("Seattle", 10, 100);
