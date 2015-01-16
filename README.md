@@ -3,6 +3,8 @@ Modeling the budget dynamics of a public library
 
 Jay Springate and Duncan Germain
 
+***Current known bug: formatting is off in Firefox, despite a reset.***
+
 We chose to model the simplified budget dynamics of a public library, taking into account both government funding and private patronage.  Our simulator allows a user to input minimum and maximum projections for both sources of funding (including negative numbers, if e.g. there are unexpected budget cuts or a pledged supporter backs out).  The simulator then calculates possible changes to the balance over the course of a selected number of years.
 
 Future functionality may include alterable initial balance for a given library, as well as a "kill" feature that stops the simulation if the library becomes insolvent.
