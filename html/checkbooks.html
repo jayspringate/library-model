@@ -28,7 +28,7 @@
 				<div class="grid_14 push_1 main">
 					<div class="grid_12 push_1 description">
 						<h1>Check out the Books</h1>
-						<p>TO USE OUR SIMULATOR:</p>
+						<h3>TO USE OUR SIMULATOR:</h3>
 						<ul>
 							<li>Select your city and the length of your financial projection from the dropdowns provided.</li>
 							<li>Enter the maximum expected government contributions above the baseline, as well as the maximum expected shortfall.  "1" represents $1,000,000, ".3" represents $300,000, etc.</li>
@@ -36,17 +36,45 @@
 							<li>Click "Calculate" to tabulate your results.</li>
 					</div>
 					<div class="grid_12 push_1 userinput">
-						<select class="dropdown" id="city">
-							<option id="sea" value="library">Seattle</option>
-							<option id="tac" value="library">Tacoma</option>
-							<option id="bel" value="library">Bellevue</option>
-							<option id="kir" value="library">Kirkland</option>
-							<option id="put" value="library">Putingrad</option>
+						<select class="dropdown" id="branch">
+							<option id="sea" value="Seattle">Seattle</option>
+							<option id="tac" value="Tacoma">Tacoma</option>
+							<option id="bel" value="Bellevue">Bellevue</option>
+							<option id="kir" value="Kirkland">Kirkland</option>
+							<option id="put" value="Putingrad">Putingrad</option>
 						</select>
-						<input class="textinput" id="pubpos" type="text" placeholder="So">
-						<input class="textinput" id="pubneg" type="text" placeholder="Happy">
-						<input class="textinput" id="pripos" type="text" placeholder="It's">
-						<input class="textinput" id="prineg" type="text" placeholder="Thursday">
+						<select class="dropdown" id="years">
+							<option id="01" value="1">through 2016</option>
+							<option id="02" value="2">through 2017</option>
+							<option id="03" value="3">through 2018</option>
+							<option id="04" value="4">through 2019</option>
+							<option id="05" value="5">through 2020</option>
+							<option id="06" value="6">through 2021</option>
+							<option id="07" value="7">through 2022</option>
+							<option id="08" value="8">through 2023</option>
+							<option id="09" value="9">through 2024</option>
+							<option id="10" value="10">through 2025</option>
+							<option id="11" value="11">through 2026</option>
+							<option id="12" value="12">through 2027</option>
+							<option id="13" value="13">through 2028</option>
+							<option id="14" value="14">through 2029</option>
+							<option id="15" value="15">through 2030</option>
+							<option id="16" value="16">through 2031</option>
+							<option id="17" value="17">through 2032</option>
+							<option id="18" value="18">through 2033</option>
+							<option id="19" value="19">through 2034</option>
+							<option id="20" value="20">through 2035</option>
+							<option id="21" value="21">through 2036</option>
+							<option id="22" value="22">through 2037</option>
+							<option id="23" value="23">through 2038</option>
+							<option id="24" value="24">through 2039</option>
+							<option id="25" value="25">through 2040</option>
+						</select>
+						<input class="textinput" id="govMinChange" type="text" placeholder="So">
+						<input class="textinput" id="govMaxChange" type="text" placeholder="Happy">
+						<input class="textinput" id="priMinChange" type="text" placeholder="It's">
+						<input class="textinput" id="priMaxChange" type="text" placeholder="Thursday">
+						<button id="submit">Calculate</button>
 					</div>
 					<div class="grid_12 push_1 results">
 						<h2>CityName Library</h2>

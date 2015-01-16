@@ -1,7 +1,6 @@
 body {
 	background-color: navy;
 }
-
 div {
 	min-height: 40px;
 }
@@ -23,6 +22,10 @@ p {
 	text-indent: 5%;
 	text-align: justify;
 	margin: 10px;
+	line-height: 130%;
+}
+ul {
+	list-style-type: disc;
 	line-height: 130%;
 }
 table, th, td {
@@ -56,6 +59,9 @@ button a:first-child {
 	font-family: Abel;
 	font-size: 14px;
 }
+#tryitout {
+	text-decoration: none;
+}
 #homelink {
 	position: absolute;
 	left: -15px;
@@ -73,6 +79,7 @@ button a:first-child {
 .pagenav {
 	height: 25px;
 	width: 75px;
+	text-align: center;
 }
 
 .main {
@@ -86,10 +93,11 @@ button a:first-child {
 	margin: 10 0 10 0;
 }
 .dropdown {
-	margin: 10 0 10 0;
+	margin: 10 0 10 10;
 }
 .textinput {
-	margin: 10 0 10 0;
+	margin: 10 5 10 5;
+	width: 105px;
 }
 .results {
 	background-color: #BBEEFF;
