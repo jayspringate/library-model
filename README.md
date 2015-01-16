@@ -16,4 +16,4 @@ Front-end problems included creating a table that could intelligently receive in
 Overall, the project feels like an egg ... it doesn't do anything real-world useful, but it's definitely the seed of a genuinely useful application.  If we were to spend another month on both front- and back-end, we feel we could produce a real tool in this domain.
 
 
-![Domain model](https://www.dropbox.com/s/tzb8q2upsuap6rs/IMG.pdf?dl=0) 
+![Domain model](http://i.imgur.com/SSzLNNh.png) 
