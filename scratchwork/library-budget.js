@@ -1,65 +1,43 @@
-function Government(city, minBudget, maxBudget) {
-	this.city = city;
-	this.minBudget = minBudget;
-	this.maxBudget = maxBudget;
+function Government(govMinChange, govMaxChange) {
+	this.govMinChange = govMinChange;
+	this.govMaxChange = govMaxChange;
+	this.getbudgetAmount = function() { 
+		return Math.round((Math.floor(Math.random() * (this.govMaxChange - this.govMinChange + 1)) + parseInt(this.govMinChange)));
+		}	
+	}
+
+function PrivateSector(priMinChange, priMaxChange) {
+	this.priMinChange = priMinChange;
+	this.priMaxChange = priMaxChange;
+	this.getDonateAmount = function () {
+		return Math.round((Math.floor(Math.random() * (this.priMaxChange - this.priMinChange + 1)) + parseInt(this.priMinChange)));
+	}
 }
-
-Government.prototype.paysout = function() {
-	var budtotal = Math.floor(Math.random() * (1 + this.maxBudget - this.minBudget) + this.minBudget);
-	console.log(budtotal);
-	return budtotal;
-}
-
-function Population(city, minDonations, maxDonations) {
-	this.city = city;
-	this.minDonations = minDonations;
-	this.maxDonations = maxDonations;
-}
-
-Population.prototype.donated = function () {
-	var dontotal = Math.floor(Math.random() * (1 + this.maxDonations - this.minDonations) + this.minDonations);
-	console.log(dontotal);
-	return dontotal;
-}
-
-var seattleGovt = new Government("Seattle", 10, 100);
-var seattlePatr = new Population("Seattle", 0, 50);
-
 
 function Library(branch, balance) {
 	this.branch = branch;
 	this.balance = balance;
 }
 
-Library.prototype.calcBalance = function() {
-	this.balance += seattleGovt.paysout() + seattlePatr.donated();
-}
+var government = new Government(document.getElementById("govMinChange").value, 
+															   document.getElementById("govMaxChange").value);
 
-function TrackLibraries() {
-	this.libraries = [];
-}
+var privateSector = new PrivateSector(document.getElementById("priMinChange").value,
+	                                 document.getElementById("priMaxChange").value);
 
-TrackLibraries.prototype.addLibrary = function(branch, balance) {
-	this.libraries.push(new Library(branch, balance));
-}
+var library = new Library(document.getElementById("branch").value,
+												  document.getElementById("balance").value)
 
-TrackLibraries.prototype.printBottomLine = function () {
-	for (entry in this.libraries) {
-		this.libraries[entry].calcBalance();
-		console.log(this.libraries[entry].branch + ": " + this.libraries[entry].balance);
+function printOutput() {
+	for (var years = 0; years < document.getElementById("years").value; years++) {
+		document.getElementsByClassName("budgetOutput")[years].innerHTML = government.getbudgetAmount();
+		document.getElementsByClassName("donateOutput")[years].innerHTML = privateSector.getDonateAmount();
+		library.balance = parseInt(library.balance) + parseInt(document.getElementsByClassName("budgetOutput")[years].innerHTML) + parseInt(document.getElementsByClassName("donateOutput")[years].innerHTML);
+		document.getElementsByClassName("balanceOutput")[years].innerHTML = library.balance;
 	}
+	library.balance = document.getElementById("balance").value;
 }
 
+var submit = document.getElementById("submit");
+submit.addEventListener("click", printOutput, false);
 
-var seattleLibraries = new TrackLibraries();
-seattleLibraries.addLibrary ("Central", 500000);
-seattleLibraries.addLibrary ("Capitol Hill", 500000);
-seattleLibraries.addLibrary ("Montlake", 500000);
-seattleLibraries.addLibrary ("University", 500000);
-
-
-
-seattleGovt.paysout();
-seattlePatr.donated();
-
-seattleLibraries.printBottomLine();
