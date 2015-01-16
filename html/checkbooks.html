@@ -6,17 +6,20 @@
 		<link type="text/css" rel="stylesheet" href="../css/layout.css">
 		<link type="text/css" rel="stylesheet" href="../css/module.css">
 		<link type="text/css" rel="stylesheet" href="../css/state.css">
+		<link type="text/css" rel="stylesheet" href='http://fonts.googleapis.com/css?family=Abel|Yellowtail|Droid+Serif:400,700'>
 	</head>
 	<body>
 		<div class="container_16">
 			<header>
 				<div class="grid_14 push_1 header">
-					<div class="grid_5 push_1 logo">Logo!</div>
-					<img src="../static/open-books.png" width="116" height="79">
-					<div class="grid_2 push_3 navigation">
-						<button class="pagenav">Home!</button>
-						<button class="pagenav">Check!</button>
-						<button class="pagenav">About!</button>
+					<div class="grid_8 push_1 logo">Check out the Books &#10003;</div>
+					<div class="grid_1 push_1 openbooks">
+						<img src="../static/open-books.png" width="135" height="89">
+					</div>
+					<div class="grid_1 push_3 navigation">
+						<button class="pagenav" id="homelink"><a href="mainbooks.html">Home</a></button>
+						<button class="pagenav" id="checklink"><a href="checkbooks.html">Check</a></button>
+						<button class="pagenav" id="aboutlink"><a href="aboutbooks.html">About</a></button>
 					</div>
 				</div>
 				<div class="clear"></div>
@@ -24,15 +27,21 @@
 			<section>
 				<div class="grid_14 push_1 main">
 					<div class="grid_12 push_1 description">
-						<p>Paragraph explaining the workflow.</p>
+						<h1>Check out the Books</h1>
+						<p>TO USE OUR SIMULATOR:</p>
+						<ul>
+							<li>Select your city and the length of your financial projection from the dropdowns provided.</li>
+							<li>Enter the maximum expected government contributions above the baseline, as well as the maximum expected shortfall.  "1" represents $1,000,000, ".3" represents $300,000, etc.</li>
+							<li>Enter the maximum expected private contributions above the baseline, as well as the maximum expected shortfall.</li>
+							<li>Click "Calculate" to tabulate your results.</li>
 					</div>
 					<div class="grid_12 push_1 userinput">
 						<select class="dropdown" id="city">
-							<option id="sea" value="weekday">Seattle</option>
-							<option id="tac" value="weekday">Tacoma</option>
-							<option id="bel" value="weekday">Bellevue</option>
-							<option id="kir" value="weekday">Kirkland</option>
-							<option id="put" value="weekday">Putingrad</option>
+							<option id="sea" value="library">Seattle</option>
+							<option id="tac" value="library">Tacoma</option>
+							<option id="bel" value="library">Bellevue</option>
+							<option id="kir" value="library">Kirkland</option>
+							<option id="put" value="library">Putingrad</option>
 						</select>
 						<input class="textinput" id="pubpos" type="text" placeholder="So">
 						<input class="textinput" id="pubneg" type="text" placeholder="Happy">
@@ -40,17 +49,9 @@
 						<input class="textinput" id="prineg" type="text" placeholder="Thursday">
 					</div>
 					<div class="grid_12 push_1 results">
-						<h3>CityName Library</h3>
-						<p>This will be a table or maybe just well-organized text.</p>
-					</div>
-				</div>
-				<div class="clear"></div>
-			</section>
-			<footer>
-				<div class="grid_14 push_1 footer">
-					<p>I am the footer.</p>
-					<table>
-						<caption>Results</caption>
+						<h2>CityName Library</h2>
+						<table class="data">
+						<caption><h3>Results</h3></caption>
 							<tr>
 								<th>Year</th>
 								<th>Projected Public Total</th>
@@ -82,6 +83,13 @@
 								<th>Black</th>
 							</tr>
 					</table>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</section>
+			<footer>
+				<div class="grid_14 push_1 footer">
+					<p>I am the footer.</p>
 				</div>
 				<div class="clear"></div>
 			</footer>

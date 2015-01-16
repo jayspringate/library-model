@@ -1,26 +1,84 @@
+body {
+	background-color: navy;
+}
+
 div {
 	min-height: 40px;
 }
+h1, h2, h3 {
+	font-weight: 700;
+	text-align: center;
+	margin: 10 0 5 0;
+}
+h1 {
+	font-size: 24px;
+}
+h2 {
+	font-size: 20px;
+}
+h3 {
+	font-size: 16px;
+}
+p {
+	text-indent: 5%;
+	text-align: justify;
+	margin: 10px;
+	line-height: 130%;
+}
+table, th, td {
+	border: 1px solid navy;
+	padding: 5 10 5 10;
+	margin: 5 0 20 0;
+}
 
+.grid_14 {
+	background-color: #CDCDCD;
+}
 .header {
-	background-color: red;
+
 }
 .logo {
-	background-color: orange;
-	margin: 10 0 10 0;
+	font-family: Droid serif;
+	font-weight: 700;
+	font-size: 40px;
+	color: navy;
+	margin: 35 0 35 0;
+}
+.openbooks {
+	margin: 10 0 10 10;
 }
 .navigation {
-	background-color: yellow;
-	margin: 10 0 10 0;
+	height: 85px;
+	margin: 10;
+}
+button a:first-child {
+	text-decoration: none;
+	font-family: Abel;
+	font-size: 14px;
+}
+#homelink {
+	position: absolute;
+	left: -15px;
+}
+#checklink {
+	position: absolute;
+	left: -15px;
+	top: 30px;
+}
+#aboutlink {
+	position: absolute;
+	left: -15px;
+	top: 60px;
 }
 .pagenav {
+	height: 25px;
+	width: 75px;
+}
+
+.main {
 
 }
-.main {
-	background-color: green;
-}
 .description {
-	background-color: blue;
 	margin: 10 0 10 0;
 }
 .userinput {
@@ -34,10 +92,13 @@ div {
 	margin: 10 0 10 0;
 }
 .results {
-	background-color: red;
+	background-color: #BBEEFF;
 	margin: 10 0 10 0;
 }
+.data {
+	margin-left: auto;
+	margin-right: auto;
+}
 .footer {
-	background-color: orange;
 	margin: 10 0 10 10;
 }
