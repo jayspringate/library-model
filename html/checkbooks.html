@@ -24,18 +24,36 @@
 				</div>
 				<div class="clear"></div>
 			</header>
-			<section>
+			<article>
 				<div class="grid_14 push_1 main">
 					<div class="grid_12 push_1 description">
 						<h1>Check out the Books</h1>
 						<h3>TO USE OUR SIMULATOR:</h3>
 						<ul>
-							<li>Select your city and the length of your financial projection from the dropdowns provided.</li>
+							<li>Select your library's location and the length of your financial projection from the dropdowns provided.</li>
 							<li>Enter the maximum expected government contributions above the baseline, as well as the maximum expected shortfall.  "1" represents $1,000,000, ".3" represents $300,000, etc.</li>
 							<li>Enter the maximum expected private contributions above the baseline, as well as the maximum expected shortfall.</li>
 							<li>Click "Calculate" to tabulate your results.</li>
 					</div>
 					<div class="grid_12 push_1 userinput">
+						<div class="grid_2 uicaption" id="captionLocation">
+							<h4>Library location</h4>
+						</div>
+						<div class="grid_2 uicaption" id="captionYear">
+							<h4>Length of forecast</h4>
+						</div>
+						<div class="grid_2 uicaption" id="captionGovmin">
+							<h4>Gov't minimum</h4>
+						</div>
+						<div class="grid_2 uicaption" id="captionGovmax">
+							<h4>Gov't maximum</h4>
+						</div>
+						<div class="grid_2 uicaption" id="captionPrimin">
+							<h4>Private minimum</h4>
+						</div>
+						<div class="grid_2 uicaption" id="captionPrimax">
+							<h4>Private maximum</h4>
+						</div>
 						<select class="dropdown" id="branch">
 							<option id="sea" value="Seattle">Seattle</option>
 							<option id="tac" value="Tacoma">Tacoma</option>
@@ -70,10 +88,10 @@
 							<option id="24" value="24">through 2039</option>
 							<option id="25" value="25">through 2040</option>
 						</select>
-						<input class="textinput" id="govMinChange" type="text" placeholder="So">
-						<input class="textinput" id="govMaxChange" type="text" placeholder="Happy">
-						<input class="textinput" id="priMinChange" type="text" placeholder="It's">
-						<input class="textinput" id="priMaxChange" type="text" placeholder="Thursday">
+						<input class="textinput" id="govMinChange" type="text" placeholder="Type 1 for $1mil">
+						<input class="textinput" id="govMaxChange" type="text" placeholder="Type 1 for $1mil">
+						<input class="textinput" id="priMinChange" type="text" placeholder="Type 1 for $1mil">
+						<input class="textinput" id="priMaxChange" type="text" placeholder="Type 1 for $1mil">
 						<button id="submit">Calculate</button>
 					</div>
 					<div class="grid_12 push_1 results">
@@ -88,153 +106,153 @@
 							</tr>
 							<tr>
 								<th>2016</th>
-								<th class="budgetOutput">awaiting input</th>
-								<th class="donateOutput">awaiting input</th>
-								<th class="balanceOutput">awaiting input</th>
+								<th class="budgetOutput">-----</th>
+								<th class="donateOutput">-----</th>
+								<th class="balanceOutput">-----</th>
 							</tr>
 							<tr>
 								<th>2017</th>
-								<th class="budgetOutput">awaiting input</th>
-								<th class="donateOutput">awaiting input</th>
-								<th class="balanceOutput">awaiting input</th>
+								<th class="budgetOutput">-----</th>
+								<th class="donateOutput">-----</th>
+								<th class="balanceOutput">-----</th>
 							</tr>
 							<tr>
 								<th>2018</th>
-								<th class="budgetOutput">awaiting input</th>
-								<th class="donateOutput">awaiting input</th>
-								<th class="balanceOutput">awaiting input</th>
+								<th class="budgetOutput">-----</th>
+								<th class="donateOutput">-----</th>
+								<th class="balanceOutput">-----</th>
 							</tr>
 							<tr>
 								<th>2019</th>
-								<th class="budgetOutput">awaiting input</th>
-								<th class="donateOutput">awaiting input</th>
-								<th class="balanceOutput">awaiting input</th>
+								<th class="budgetOutput">-----</th>
+								<th class="donateOutput">-----</th>
+								<th class="balanceOutput">-----</th>
 							</tr>
 							<tr>
 								<th>2020</th>
-								<th class="budgetOutput">awaiting input</th>
-								<th class="donateOutput">awaiting input</th>
-								<th class="balanceOutput">awaiting input</th>
+								<th class="budgetOutput">-----</th>
+								<th class="donateOutput">-----</th>
+								<th class="balanceOutput">-----</th>
 							</tr>
 							<tr>
 								<th>2021</th>
-								<th>###</th>
-								<th>###</th>
-								<th>Black</th>
+								<th class="budgetOutput">-----</th>
+								<th class="donateOutput">-----</th>
+								<th class="balanceOutput">-----</th>
 							</tr>
 							<tr>
 								<th>2022</th>
-								<th>###</th>
-								<th>###</th>
-								<th>Black</th>
+								<th class="budgetOutput">-----</th>
+								<th class="donateOutput">-----</th>
+								<th class="balanceOutput">-----</th>
 							</tr>
 							<tr>
 								<th>2023</th>
-								<th>###</th>
-								<th>###</th>
-								<th>Black</th>
+								<th class="budgetOutput">-----</th>
+								<th class="donateOutput">-----</th>
+								<th class="balanceOutput">-----</th>
 							</tr>
 							<tr>
 								<th>2024</th>
-								<th>###</th>
-								<th>###</th>
-								<th>Black</th>
+								<th class="budgetOutput">-----</th>
+								<th class="donateOutput">-----</th>
+								<th class="balanceOutput">-----</th>
 							</tr>
 							<tr>
 								<th>2025</th>
-								<th>###</th>
-								<th>###</th>
-								<th>Black</th>
+								<th class="budgetOutput">-----</th>
+								<th class="donateOutput">-----</th>
+								<th class="balanceOutput">-----</th>
 							</tr>
 							<tr>
 								<th>2026</th>
-								<th>###</th>
-								<th>###</th>
-								<th>Black</th>
+								<th class="budgetOutput">-----</th>
+								<th class="donateOutput">-----</th>
+								<th class="balanceOutput">-----</th>
 							</tr>
 							<tr>
 								<th>2027</th>
-								<th>###</th>
-								<th>###</th>
-								<th>Black</th>
+								<th class="budgetOutput">-----</th>
+								<th class="donateOutput">-----</th>
+								<th class="balanceOutput">-----</th>
 							</tr>
 							<tr>
 								<th>2028</th>
-								<th>###</th>
-								<th>###</th>
-								<th>Black</th>
+								<th class="budgetOutput">-----</th>
+								<th class="donateOutput">-----</th>
+								<th class="balanceOutput">-----</th>
 							</tr>
 							<tr>
 								<th>2029</th>
-								<th>###</th>
-								<th>###</th>
-								<th>Black</th>
+								<th class="budgetOutput">-----</th>
+								<th class="donateOutput">-----</th>
+								<th class="balanceOutput">-----</th>
 							</tr>
 							<tr>
 								<th>2030</th>
-								<th>###</th>
-								<th>###</th>
-								<th>Black</th>
+								<th class="budgetOutput">-----</th>
+								<th class="donateOutput">-----</th>
+								<th class="balanceOutput">-----</th>
 							</tr>
 							<tr>
 								<th>2031</th>
-								<th>###</th>
-								<th>###</th>
-								<th>Black</th>
+								<th class="budgetOutput">-----</th>
+								<th class="donateOutput">-----</th>
+								<th class="balanceOutput">-----</th>
 							</tr>
 							<tr>
 								<th>2032</th>
-								<th>###</th>
-								<th>###</th>
-								<th>Black</th>
+								<th class="budgetOutput">-----</th>
+								<th class="donateOutput">-----</th>
+								<th class="balanceOutput">-----</th>
 							</tr>
 							<tr>
 								<th>2033</th>
-								<th>###</th>
-								<th>###</th>
-								<th>Black</th>
+								<th class="budgetOutput">-----</th>
+								<th class="donateOutput">-----</th>
+								<th class="balanceOutput">-----</th>
 							</tr>
 							<tr>
 								<th>2034</th>
-								<th>###</th>
-								<th>###</th>
-								<th>Black</th>
+								<th class="budgetOutput">-----</th>
+								<th class="donateOutput">-----</th>
+								<th class="balanceOutput">-----</th>
 							</tr>
 							<tr>
 								<th>2035</th>
-								<th>###</th>
-								<th>###</th>
-								<th>Black</th>
+								<th class="budgetOutput">-----</th>
+								<th class="donateOutput">-----</th>
+								<th class="balanceOutput">-----</th>
 							</tr>
 							<tr>
 								<th>2036</th>
-								<th>###</th>
-								<th>###</th>
-								<th>Black</th>
+								<th class="budgetOutput">-----</th>
+								<th class="donateOutput">-----</th>
+								<th class="balanceOutput">-----</th>
 							</tr>
 							<tr>
 								<th>2037</th>
-								<th>###</th>
-								<th>###</th>
-								<th>Black</th>
+								<th class="budgetOutput">-----</th>
+								<th class="donateOutput">-----</th>
+								<th class="balanceOutput">-----</th>
 							</tr>
 							<tr>
 								<th>2038</th>
-								<th>###</th>
-								<th>###</th>
-								<th>Black</th>
+								<th class="budgetOutput">-----</th>
+								<th class="donateOutput">-----</th>
+								<th class="balanceOutput">-----</th>
 							</tr>
 							<tr>
 								<th>2039</th>
-								<th>###</th>
-								<th>###</th>
-								<th>Black</th>
+								<th class="budgetOutput">-----</th>
+								<th class="donateOutput">-----</th>
+								<th class="balanceOutput">-----</th>
 							</tr>
 							<tr>
 								<th>2040</th>
-								<th>###</th>
-								<th>###</th>
-								<th>Black</th>
+								<th class="budgetOutput">-----</th>
+								<th class="donateOutput">-----</th>
+								<th class="balanceOutput">-----</th>
 							</tr>
 					</table>
 					</div>
