@@ -6,17 +6,20 @@
 		<link type="text/css" rel="stylesheet" href="../css/layout.css">
 		<link type="text/css" rel="stylesheet" href="../css/module.css">
 		<link type="text/css" rel="stylesheet" href="../css/state.css">
+		<link type="text/css" rel="stylesheet" href='http://fonts.googleapis.com/css?family=Abel|Yellowtail|Droid+Serif:400,700'>
 	</head>
 	<body>
 		<div class="container_16">
 			<header>
 				<div class="grid_14 push_1 header">
-					<div class="grid_5 push_1 logo">Logo!</div>
-					<img src="../static/open-books.png" width="116" height="79">
-					<div class="grid_2 push_3 navigation">
-						<button class="pagenav">Home!</button>
-						<button class="pagenav">Check!</button>
-						<button class="pagenav">About!</button>
+					<div class="grid_8 push_1 logo">Check out the Books &#10003;</div>
+					<div class="grid_1 push_1 openbooks">
+						<img src="../static/open-books.png" width="135" height="89">
+					</div>
+					<div class="grid_1 push_3 navigation">
+						<button class="pagenav" id="homelink"><a href="mainbooks.html">Home</a></button>
+						<button class="pagenav" id="checklink"><a href="checkbooks.html">Check</a></button>
+						<button class="pagenav" id="aboutlink"><a href="aboutbooks.html">About</a></button>
 					</div>
 				</div>
 				<div class="clear"></div>
@@ -41,15 +44,7 @@
 					</div>
 					<div class="grid_12 push_1 results">
 						<h3>CityName Library</h3>
-						<p>This will be a table or maybe just well-organized text.</p>
-					</div>
-				</div>
-				<div class="clear"></div>
-			</section>
-			<footer>
-				<div class="grid_14 push_1 footer">
-					<p>I am the footer.</p>
-					<table>
+						<table class="data">
 						<caption>Results</caption>
 							<tr>
 								<th>Year</th>
@@ -82,6 +77,13 @@
 								<th>Black</th>
 							</tr>
 					</table>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</section>
+			<footer>
+				<div class="grid_14 push_1 footer">
+					<p>I am the footer.</p>
 				</div>
 				<div class="clear"></div>
 			</footer>
