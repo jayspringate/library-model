@@ -29,8 +29,17 @@ function printOutput() {
 		document.getElementsByClassName("balanceOutput")[years].innerHTML = library.balance;
 	}
 	library.balance = 200;
-	var min = Math.min.apply(Math, document.getElementsByClassName("balanceOutput").innerHTML);
-	console.log(min);
+	var nodeList = document.getElementsByClassName("balanceOutput");
+	var nodeArray = [];
+	var balOutputArray = [];
+	for (var i = 0; i < nodeList.length; ++i) {
+    nodeArray[i] = nodeList[i];
+    balOutputArray.push(nodeArray[i].textContent);
+ }
+
+ balOutputNumbers = balOutputArray.map(Number);
+ var min = Math.min.apply(null, balOutputArray);
+ console.log(min);
 }
 
 var submit = document.getElementById("submit");
